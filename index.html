@@ -2,12 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bantayan Southern Institute - Batch 2002 (20 Years Golden Reunion)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bantayan Southern Institute - Batch 2002 (25 Years Silver Reunion)</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
+
+    :root{
+      --silver:#c0c0c0;
+      --silver-light:#f5f5f5;
+      --silver-dark:#8f8f8f;
+      --silver-metal:#b8bcc2;
+      --dark:#111;
+      --white:#fff;
+    }
+
     *{
       margin:0;
       padding:0;
@@ -15,161 +25,60 @@
       font-family:'Poppins',sans-serif;
     }
 
+    html{
+      scroll-behavior:smooth;
+    }
+
     body{
-      background:#f5f5f5;
       color:#333;
       line-height:1.6;
+
+      background:
+      linear-gradient(
+        135deg,
+        #f5f5f5 0%,
+        #d9d9d9 25%,
+        #f2f2f2 50%,
+        #c0c0c0 75%,
+        #f8f8f8 100%
+      );
     }
 
     header{
-  position:relative;
-  height:100vh;
-  overflow:hidden;
+      position:relative;
+      height:100vh;
+      overflow:hidden;
 
-  background:
-    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-    url('https://d3hukd8e3cn3kb.cloudfront.net/images/posts/sunsetwithu/p6.jpg');
+      background:
+      linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+      url('https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?q=80&w=1600&auto=format&fit=crop');
 
-  background-size:cover;
-  background-position:center;
+      background-size:cover;
+      background-position:center;
 
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  color:white;
-}
-
-/* HERO TEXT */
-
-.hero{
-  position:relative;
-  z-index:10;
-  max-width:800px;
-  padding:20px;
-}
-
-/* PARTICLES */
-
-.particles{
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  overflow:hidden;
-  z-index:1;
-}
-
-.particles span{
-  position:absolute;
-  bottom:-150px;
-  border-radius:50%;
-  background:rgba(255,215,0,0.8);
-  box-shadow:0 0 20px gold;
-
-  animation:floatUp linear infinite;
-}
-
-/* Individual Particle Settings */
-
-.particles span:nth-child(1){
-  left:10%;
-  width:15px;
-  height:15px;
-  animation-duration:15s;
-}
-
-.particles span:nth-child(2){
-  left:20%;
-  width:25px;
-  height:25px;
-  animation-duration:18s;
-  animation-delay:2s;
-}
-
-.particles span:nth-child(3){
-  left:35%;
-  width:18px;
-  height:18px;
-  animation-duration:12s;
-}
-
-.particles span:nth-child(4){
-  left:50%;
-  width:30px;
-  height:30px;
-  animation-duration:20s;
-}
-
-.particles span:nth-child(5){
-  left:65%;
-  width:20px;
-  height:20px;
-  animation-duration:16s;
-}
-
-.particles span:nth-child(6){
-  left:75%;
-  width:12px;
-  height:12px;
-  animation-duration:10s;
-}
-
-.particles span:nth-child(7){
-  left:85%;
-  width:35px;
-  height:35px;
-  animation-duration:22s;
-}
-
-.particles span:nth-child(8){
-  left:40%;
-  width:16px;
-  height:16px;
-  animation-duration:14s;
-}
-
-.particles span:nth-child(9){
-  left:55%;
-  width:10px;
-  height:10px;
-  animation-duration:11s;
-}
-
-.particles span:nth-child(10){
-  left:90%;
-  width:24px;
-  height:24px;
-  animation-duration:19s;
-}
-
-/* ANIMATION */
-
-@keyframes floatUp{
-  0%{
-    transform:translateY(0) rotate(0deg);
-    opacity:0;
-  }
-
-  10%{
-    opacity:1;
-  }
-
-  100%{
-    transform:translateY(-1200px) rotate(720deg);
-    opacity:0;
-  }
-}
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:white;
+    }
 
     .hero{
-      max-width:800px;
+      position:relative;
+      z-index:10;
+      max-width:850px;
+      padding:20px;
     }
 
     .hero h1{
       font-size:4rem;
       margin-bottom:10px;
-      color:gold;
+      color:var(--silver-light);
+
+      text-shadow:
+      0 0 10px rgba(255,255,255,0.8),
+      0 0 20px rgba(192,192,192,0.7),
+      0 0 40px rgba(255,255,255,0.5);
     }
 
     .hero h2{
@@ -186,17 +95,60 @@
     .btn{
       display:inline-block;
       padding:14px 30px;
-      background:gold;
-      color:#000;
+
+      background:linear-gradient(
+        145deg,
+        #f5f5f5,
+        #c0c0c0,
+        #8f8f8f
+      );
+
+      color:#111;
       text-decoration:none;
       border-radius:50px;
       font-weight:600;
+
+      border:1px solid rgba(255,255,255,0.5);
+
+      box-shadow:
+      0 4px 10px rgba(0,0,0,0.3),
+      inset 0 1px 1px rgba(255,255,255,0.7);
+
       transition:0.3s;
+
+      position:relative;
+      overflow:hidden;
+    }
+
+    .btn::before{
+      content:'';
+      position:absolute;
+      top:0;
+      left:-200px;
+      width:100px;
+      height:100%;
+      background:rgba(255,255,255,0.4);
+      transform:skewX(-25deg);
+
+      animation:silverShine 3s infinite linear;
     }
 
     .btn:hover{
-      background:#fff;
-      transform:translateY(-3px);
+      transform:translateY(-4px) scale(1.03);
+
+      box-shadow:
+      0 8px 20px rgba(255,255,255,0.3),
+      0 8px 25px rgba(0,0,0,0.4);
+    }
+
+    @keyframes silverShine{
+      0%{
+        background-position:-200px;
+      }
+
+      100%{
+        background-position:300px;
+      }
     }
 
     section{
@@ -210,7 +162,10 @@
 
     .section-title h2{
       font-size:2.5rem;
-      color:#b8860b;
+      color:var(--silver-dark);
+
+      text-shadow:
+      0 0 10px rgba(255,255,255,0.5);
     }
 
     .about{
@@ -223,24 +178,76 @@
     .about img{
       width:100%;
       border-radius:20px;
-      box-shadow:0 10px 20px rgba(0,0,0,0.2);
+
+      box-shadow:
+      0 10px 20px rgba(0,0,0,0.2);
     }
 
     .details{
-      background:white;
+      background:rgba(255,255,255,0.4);
       border-radius:20px;
       padding:40px;
-      box-shadow:0 10px 20px rgba(0,0,0,0.1);
+
+      backdrop-filter:blur(10px);
+
+      border:1px solid rgba(255,255,255,0.3);
+
+      box-shadow:
+      0 10px 20px rgba(0,0,0,0.1);
     }
 
-    .details ul{
-      list-style:none;
-      margin-top:20px;
+    .event-schedule{
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+      margin-top:25px;
     }
 
-    .details li{
-      margin-bottom:15px;
+    .event-card{
+      flex:1;
+      min-width:250px;
+
+      background:linear-gradient(
+        135deg,
+        #f5f5f5,
+        #c0c0c0,
+        #8f8f8f
+      );
+
+      color:#111;
+
+      padding:25px;
+      border-radius:20px;
+
+      border:1px solid rgba(255,255,255,0.5);
+
+      backdrop-filter:blur(10px);
+
+      box-shadow:
+      0 10px 20px rgba(0,0,0,0.2),
+      inset 0 1px 1px rgba(255,255,255,0.5);
+
+      transition:0.3s;
+    }
+
+    .event-card:hover{
+      transform:translateY(-5px);
+    }
+
+    .event-card h3{
+      font-size:1.8rem;
+      margin-bottom:10px;
+    }
+
+    .event-card p{
       font-size:1.1rem;
+      font-weight:bold;
+    }
+
+    .event-card span{
+      display:block;
+      margin-top:10px;
+      font-size:1rem;
     }
 
     .gallery{
@@ -254,7 +261,11 @@
       height:250px;
       object-fit:cover;
       border-radius:15px;
+
       transition:0.3s;
+
+      box-shadow:
+      0 10px 20px rgba(0,0,0,0.2);
     }
 
     .gallery img:hover{
@@ -278,11 +289,26 @@
     }
 
     .time-box{
-      background:gold;
-      color:#000;
+      width:120px;
       padding:20px;
       border-radius:15px;
-      width:120px;
+
+      background:linear-gradient(
+        145deg,
+        #ffffff,
+        #c0c0c0,
+        #8f8f8f
+      );
+
+      color:#111;
+
+      backdrop-filter:blur(10px);
+
+      border:1px solid rgba(255,255,255,0.5);
+
+      box-shadow:
+      0 5px 15px rgba(0,0,0,0.3),
+      inset 0 1px 1px rgba(255,255,255,0.6);
     }
 
     .time-box h3{
@@ -296,69 +322,166 @@
       padding:20px;
     }
 
+    .particles{
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      overflow:hidden;
+      z-index:1;
+    }
+
+    .particles span{
+      position:absolute;
+      bottom:-150px;
+      border-radius:50%;
+
+      background:rgba(255,255,255,0.9);
+
+      box-shadow:
+      0 0 10px rgba(255,255,255,0.8),
+      0 0 25px rgba(192,192,192,0.8),
+      0 0 40px rgba(255,255,255,0.5);
+
+      filter:blur(1px);
+
+      animation:floatUp linear infinite;
+    }
+
+    .particles span:nth-child(1){
+      left:10%;
+      width:15px;
+      height:15px;
+      animation-duration:15s;
+    }
+
+    .particles span:nth-child(2){
+      left:20%;
+      width:25px;
+      height:25px;
+      animation-duration:18s;
+      animation-delay:2s;
+    }
+
+    .particles span:nth-child(3){
+      left:35%;
+      width:18px;
+      height:18px;
+      animation-duration:12s;
+    }
+
+    .particles span:nth-child(4){
+      left:50%;
+      width:30px;
+      height:30px;
+      animation-duration:20s;
+    }
+
+    .particles span:nth-child(5){
+      left:65%;
+      width:20px;
+      height:20px;
+      animation-duration:16s;
+    }
+
+    .particles span:nth-child(6){
+      left:75%;
+      width:12px;
+      height:12px;
+      animation-duration:10s;
+    }
+
+    .particles span:nth-child(7){
+      left:85%;
+      width:35px;
+      height:35px;
+      animation-duration:22s;
+    }
+
+    .particles span:nth-child(8){
+      left:40%;
+      width:16px;
+      height:16px;
+      animation-duration:14s;
+    }
+
+    .particles span:nth-child(9){
+      left:55%;
+      width:10px;
+      height:10px;
+      animation-duration:11s;
+    }
+
+    .particles span:nth-child(10){
+      left:90%;
+      width:24px;
+      height:24px;
+      animation-duration:19s;
+    }
+
+    @keyframes floatUp{
+
+      0%{
+        transform:translateY(0) rotate(0deg);
+        opacity:0;
+      }
+
+      10%{
+        opacity:1;
+      }
+
+      100%{
+        transform:translateY(-1200px) rotate(720deg);
+        opacity:0;
+      }
+    }
+
     @media(max-width:768px){
+
+      header{
+        padding:20px;
+      }
+
+      .hero{
+        padding:10px;
+      }
+
       .hero h1{
-        font-size:2.5rem;
+        font-size:2.4rem;
+        line-height:1.2;
       }
 
       .hero h2{
         font-size:1.3rem;
       }
+
+      .hero p{
+        font-size:1rem;
+      }
     }
 
-    .event-schedule{
-  display:flex;
-  gap:20px;
-  flex-wrap:wrap;
-  margin-top:25px;
-}
-
-.event-card{
-  flex:1;
-  min-width:250px;
-  background:linear-gradient(135deg, gold, #b8860b);
-  color:white;
-  padding:25px;
-  border-radius:20px;
-  box-shadow:0 10px 20px rgba(0,0,0,0.2);
-  transition:0.3s;
-}
-
-.event-card:hover{
-  transform:translateY(-5px);
-}
-
-.event-card h3{
-  font-size:1.8rem;
-  margin-bottom:10px;
-}
-
-.event-card p{
-  font-size:1.1rem;
-  font-weight:bold;
-}
-
-.event-card span{
-  display:block;
-  margin-top:10px;
-  font-size:1rem;
-}
   </style>
 </head>
 
 <body>
 
   <header>
+
     <div class="hero">
-      <h1>Class of 2002 </h1>
-      <h1>20 Years Reunion</h1>
+
+      <h1>Class of 2002</h1>
+      <h1>25 Years Silver Reunion</h1>
+
       <h2>Bantayan Southern Institute</h2>
+
       <p>
-        Celebrating two decades of friendship, memories, and success.
-        Join us for an unforgettable grand reunion night!
+        Celebrating 25 years of friendship, memories, and success.
+        Reuniting hearts and unforgettable moments since 2002.
       </p>
 
       <a href="#register" class="btn">Register Now</a>
+
     </div>
 
     <div class="particles">
@@ -373,70 +496,92 @@
       <span></span>
       <span></span>
     </div>
+
   </header>
 
   <section>
+
     <div class="section-title">
       <h2>About the Reunion</h2>
     </div>
 
     <div class="about">
-      <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1200&auto=format&fit=crop" alt="Reunion">
+
+      <img
+        src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1200&auto=format&fit=crop"
+        alt="BSI Reunion">
 
       <div class="details">
+
         <h3>Reconnect & Celebrate</h3>
 
         <p>
-          It's been 20 amazing years since we graduated.
-          Let us gather once again to celebrate memories,
-          friendships, and milestones together.
+          Let us gather once again to celebrate friendships,
+          memories, and milestones together after 25 wonderful years.
         </p>
 
         <div class="event-schedule">
 
           <div class="event-card">
+
             <h3>Day 1</h3>
+
             <p>March 24, 2027</p>
+
             <span>Welcome Party & Registration</span>
-            <span>BSI Ground : 10:00 AM</span>
+
+            <span>BSI Ground • 10:00 AM</span>
+
           </div>
-        
+
           <div class="event-card">
+
             <h3>Day 2</h3>
+
             <p>March 28, 2027</p>
-            <span>Grand Golden Reunion Gala</span>
-            <span>Not yet decided.</span>
+
+            <span>Grand Silver Reunion Gala</span>
+
+            <span>Venue to be announced soon</span>
+
           </div>
+
         </div>
-        
+
       </div>
+
     </div>
+
   </section>
 
-  <section style="background:#fff;">
+  <section style="background:rgba(255,255,255,0.5);">
+
     <div class="section-title">
       <h2>Memories Gallery</h2>
     </div>
 
     <div class="gallery">
-      <img src="https://scontent.fceb1-5.fna.fbcdn.net/v/t39.30808-6/513670277_10231477407532442_2943126821286083703_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=f798df&_nc_ohc=-QU21SUvaMoQ7kNvwHBv5it&_nc_oc=Adpx7lWAGGoUtQGH5c6Gk4ayPh2BghWe8UAB7A8Mogy6dyQHPh-PHZ-xTh4ziaYMIdE&_nc_zt=23&_nc_ht=scontent.fceb1-5.fna&_nc_gid=s-huyXsZaeFVcODg_X6pKQ&_nc_ss=7b2a8&oh=00_Af6hH7rNSDZNCnle5eiLMjUiiT99xurdIChY_U-jjC4U5A&oe=6A01F2D0">
-      <img src="https://scontent.fceb1-5.fna.fbcdn.net/v/t39.30808-6/512280885_10231482972431561_5176301136409071368_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=f798df&_nc_ohc=26wjwB2s1kkQ7kNvwFskBIN&_nc_oc=Adph8XuDIgP6iVq8a-yWQDOi3MEhqRySZH7bFKH1oww8Syxq0ouuqkmjB2XdYVE21hk&_nc_zt=23&_nc_ht=scontent.fceb1-5.fna&_nc_gid=nAr6RXp26nvOs754AEH_kA&_nc_ss=7b2a8&oh=00_Af6gFqAJsTTjFwC25ExuEzYv3IMu1TYqAkmJqd3E0f9UHg&oe=6A020F0B">
-      <img src="https://scontent.fceb1-4.fna.fbcdn.net/v/t39.30808-6/512715100_10231477408612469_3813595210821966112_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=f798df&_nc_ohc=DM7GNikFZ6QQ7kNvwHc0d0d&_nc_oc=Adp6mTBGMLC3X_DEweYyvlFfbgHO4rg1eRBa_1bEKJwBhoLm6q5oQc0jQYC2jQlARck&_nc_zt=23&_nc_ht=scontent.fceb1-4.fna&_nc_gid=MumfcCppzYshkqC8pQ_YTw&_nc_ss=7b2a8&oh=00_Af7-03UinEW5XfvfQFy99i_xeLHDdmS4I286IHituU4lLw&oe=6A02134F">
-      <img src="https://scontent.fceb1-1.fna.fbcdn.net/v/t39.30808-6/468104071_10234629026776322_2763598377334614136_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=f7fc3c&_nc_ohc=EUkvh0s3sEAQ7kNvwGcgkK-&_nc_oc=AdqGmdUKP7IJ2UQvojmq9ePYk9hxfha-lyWIwlG3hRILqfljI7e6Cji0rdl24fa7mn4&_nc_zt=23&_nc_ht=scontent.fceb1-1.fna&_nc_gid=CTJNaKFKRm_ijkNuTbOu-w&_nc_ss=7b2a8&oh=00_Af4eSjFurf7zP1jxRlRmC6QdNQg7gcBbRKOXp65VxwBPsQ&oe=6A01FBF8">
-      <img src="https://scontent.fceb1-3.fna.fbcdn.net/v/t39.30808-6/511721144_9994842460564734_931475203051400814_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=f7fc3c&_nc_ohc=MagOAj6NIZMQ7kNvwHB82g6&_nc_oc=AdoR2Ht4KAyJidYvmBEgwifKZtsjnPXksLN4BCr0WXMaoj7LHhk0Wi9AkLoueDjqTqI&_nc_zt=23&_nc_ht=scontent.fceb1-3.fna&_nc_gid=AF-OzAuNX4PO9brBjv052g&_nc_ss=7b2a8&oh=00_Af7AlveXAmSPKazryOtAx6_wgjVp5R7v5EBS2oNoV4Eywg&oe=6A01E329">
-      <img src="https://scontent.fceb1-2.fna.fbcdn.net/v/t39.30808-6/468211427_10234629031416438_2317971793335506629_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=f7fc3c&_nc_ohc=9AEBD7EfpGkQ7kNvwGZZCYy&_nc_oc=Adqnwjpme4kKTaO7hPhrkmbhCRAk29hfrwHpiDb_jflNzsX1Z5OQmZdf_UTHpY9Y6sw&_nc_zt=23&_nc_ht=scontent.fceb1-2.fna&_nc_gid=9JUcZtLN-1TF13UNuIrJMA&_nc_ss=7b2a8&oh=00_Af74RAMi2JuzuYFip-lpV_z1u09hi_SgKFwNkXrzBboQAQ&oe=6A020483">
-      <img src="https://scontent.fceb1-1.fna.fbcdn.net/v/t39.30808-6/494734599_1189396769508628_863848514931710820_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=101&ccb=1-7&_nc_sid=e06c5d&_nc_ohc=PFrGOiy-dE4Q7kNvwFwhuze&_nc_oc=Adrs5KwpIWs-WtL-giZfEmp7-v9Pxp7fG4denotpNEFDKKdh1iRtF5Q87RovPW9mpH4&_nc_zt=23&_nc_ht=scontent.fceb1-1.fna&_nc_gid=U-oiOVMRsTlu_6Chr2xlYg&_nc_ss=7b2a8&oh=00_Af7nlWmiUPIcZ7Vztv9c2LmuK7bELLlMsEVZWs5oWBANiw&oe=6A01EC29">
-      <img src="https://scontent.fceb1-4.fna.fbcdn.net/v/t39.30808-6/494811084_1189396739508631_4561460346387850402_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=107&ccb=1-7&_nc_sid=e06c5d&_nc_ohc=mkYrkpnHJgEQ7kNvwGUbrQ9&_nc_oc=Adq0ylF0OzGQ4cwRWxmfsMbfFVeOt52sj9xjRItvJBknkIpxIGz5ubkhn2LqI0aRfb0&_nc_zt=23&_nc_ht=scontent.fceb1-4.fna&_nc_gid=8c_pQdk87-WCX2LRPhzpPA&_nc_ss=7b2a8&oh=00_Af7of1QTDaGXlyOyujyrHl3viSYFM6avOdC3IrDX77JWJA&oe=6A01F15C">
-      <img src="https://scontent.fceb1-2.fna.fbcdn.net/v/t39.30808-6/495693268_1189396646175307_7648006969537640741_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=111&ccb=1-7&_nc_sid=e06c5d&_nc_ohc=J8ihcSHlstwQ7kNvwGAcutT&_nc_oc=Adp08VRIiXlMl-NbyM76kCrOe3J6PtRqZgsABe9D5lbkYn3G4qa7L8CeMDwAcxhWEI8&_nc_zt=23&_nc_ht=scontent.fceb1-2.fna&_nc_gid=q_126H1d843lAkCzbPn12A&_nc_ss=7b2a8&oh=00_Af4pnTjuI8gYvEyTHTvV_vsvP_j5dHuuPPAm671vAwH0HA&oe=6A021891">
-      <img src="https://scontent.fceb1-5.fna.fbcdn.net/v/t39.30808-6/494857491_1189396549508650_3262249265030178230_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=102&ccb=1-7&_nc_sid=e06c5d&_nc_ohc=mT_A5cy_n5QQ7kNvwH9a3kG&_nc_oc=AdogS6BJdt5sbfEh73Ama5VRRkRV62Q3e1DYgyu0naB55F3I1_FIMxQgiBaq9WGfHE4&_nc_zt=23&_nc_ht=scontent.fceb1-5.fna&_nc_gid=Xv1KcrJEjGsaqr3AI5yn5Q&_nc_ss=7b2a8&oh=00_Af57d092rAiFIwq75HAKA8OhUSntsaUtkZErx8bbPjzd9A&oe=6A020C78">
+
+      <img src="https://scontent.fceb1-5.fna.fbcdn.net/v/t39.30808-6/513670277_10231477407532442_2943126821286083703_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=f798df&_nc_ohc=-QU21SUvaMoQ7kNvwHBv5it&_nc_oc=Adpx7lWAGGoUtQGH5c6Gk4ayPh2BghWe8UAB7A8Mogy6dyQHPh-PHZ-xTh4ziaYMIdE&_nc_zt=23&_nc_ht=scontent.fceb1-5.fna&_nc_gid=s-huyXsZaeFVcODg_X6pKQ&_nc_ss=7b2a8&oh=00_Af6hH7rNSDZNCnle5eiLMjUiiT99xurdIChY_U-jjC4U5A&oe=6A01F2D0" alt="Reunion Memory">
+
+      <img src="https://scontent.fceb1-5.fna.fbcdn.net/v/t39.30808-6/512280885_10231482972431561_5176301136409071368_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=f798df&_nc_ohc=26wjwB2s1kkQ7kNvwFskBIN&_nc_oc=Adph8XuDIgP6iVq8a-yWQDOi3MEhqRySZH7bFKH1oww8Syxq0ouuqkmjB2XdYVE21hk&_nc_zt=23&_nc_ht=scontent.fceb1-5.fna&_nc_gid=nAr6RXp26nvOs754AEH_kA&_nc_ss=7b2a8&oh=00_Af6gFqAJsTTjFwC25ExuEzYv3IMu1TYqAkmJqd3E0f9UHg&oe=6A020F0B" alt="Friends Reunion">
+
+      <img src="https://scontent.fceb1-4.fna.fbcdn.net/v/t39.30808-6/512715100_10231477408612469_3813595210821966112_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=f798df&_nc_ohc=DM7GNikFZ6QQ7kNvwHc0d0d&_nc_oc=Adp6mTBGMLC3X_DEweYyvlFfbgHO4rg1eRBa_1bEKJwBhoLm6q5oQc0jQYC2jQlARck&_nc_zt=23&_nc_ht=scontent.fceb1-4.fna&_nc_gid=MumfcCppzYshkqC8pQ_YTw&_nc_ss=7b2a8&oh=00_Af7-03UinEW5XfvfQFy99i_xeLHDdmS4I286IHituU4lLw&oe=6A02134F"> <img src="https://scontent.fceb1-1.fna.fbcdn.net/v/t39.30808-6/468104071_10234629026776322_2763598377334614136_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=f7fc3c&_nc_ohc=EUkvh0s3sEAQ7kNvwGcgkK-&_nc_oc=AdqGmdUKP7IJ2UQvojmq9ePYk9hxfha-lyWIwlG3hRILqfljI7e6Cji0rdl24fa7mn4&_nc_zt=23&_nc_ht=scontent.fceb1-1.fna&_nc_gid=CTJNaKFKRm_ijkNuTbOu-w&_nc_ss=7b2a8&oh=00_Af4eSjFurf7zP1jxRlRmC6QdNQg7gcBbRKOXp65VxwBPsQ&oe=6A01FBF8" alt="Celebration">
+
+      <img src="https://scontent.fceb1-3.fna.fbcdn.net/v/t39.30808-6/511721144_9994842460564734_931475203051400814_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=f7fc3c&_nc_ohc=MagOAj6NIZMQ7kNvwHB82g6&_nc_oc=AdoR2Ht4KAyJidYvmBEgwifKZtsjnPXksLN4BCr0WXMaoj7LHhk0Wi9AkLoueDjqTqI&_nc_zt=23&_nc_ht=scontent.fceb1-3.fna&_nc_gid=AF-OzAuNX4PO9brBjv052g&_nc_ss=7b2a8&oh=00_Af7AlveXAmSPKazryOtAx6_wgjVp5R7v5EBS2oNoV4Eywg&oe=6A01E329"> <img src="https://scontent.fceb1-2.fna.fbcdn.net/v/t39.30808-6/468211427_10234629031416438_2317971793335506629_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=f7fc3c&_nc_ohc=9AEBD7EfpGkQ7kNvwGZZCYy&_nc_oc=Adqnwjpme4kKTaO7hPhrkmbhCRAk29hfrwHpiDb_jflNzsX1Z5OQmZdf_UTHpY9Y6sw&_nc_zt=23&_nc_ht=scontent.fceb1-2.fna&_nc_gid=9JUcZtLN-1TF13UNuIrJMA&_nc_ss=7b2a8&oh=00_Af74RAMi2JuzuYFip-lpV_z1u09hi_SgKFwNkXrzBboQAQ&oe=6A020483"> <img src="https://scontent.fceb1-1.fna.fbcdn.net/v/t39.30808-6/494734599_1189396769508628_863848514931710820_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=101&ccb=1-7&_nc_sid=e06c5d&_nc_ohc=PFrGOiy-dE4Q7kNvwFwhuze&_nc_oc=Adrs5KwpIWs-WtL-giZfEmp7-v9Pxp7fG4denotpNEFDKKdh1iRtF5Q87RovPW9mpH4&_nc_zt=23&_nc_ht=scontent.fceb1-1.fna&_nc_gid=U-oiOVMRsTlu_6Chr2xlYg&_nc_ss=7b2a8&oh=00_Af7nlWmiUPIcZ7Vztv9c2LmuK7bELLlMsEVZWs5oWBANiw&oe=6A01EC29" alt="Batch 2002">
+
     </div>
+
   </section>
 
   <section>
+
     <div class="countdown">
+
       <h2>Countdown to Reunion Day</h2>
 
       <div class="timer">
+
         <div class="time-box">
           <h3 id="days">00</h3>
           <p>Days</p>
@@ -456,71 +601,99 @@
           <h3 id="seconds">00</h3>
           <p>Seconds</p>
         </div>
+
       </div>
+
     </div>
+
   </section>
 
-  <section id="register" style="background:#fff;">
+  <section id="register" style="background:rgba(255,255,255,0.5);">
+
     <div class="section-title">
       <h2>Registration</h2>
     </div>
 
     <div class="details" style="max-width:700px; margin:auto;">
+
       <form action="https://api.web3forms.com/submit" method="POST">
 
-        <!-- Your Access Key -->
-        <input type="hidden" name="access_key" value="f9577c6a-44c0-42e8-91b5-e134d0924f84">
-      
-        <!-- Email Subject -->
-        <input type="hidden" name="subject" value="20 Years Golden Reunion Registration">
-      
-        <!-- Redirect After Submit -->
+        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY">
+
+        <input type="hidden" name="subject" value="25 Years Silver Reunion Registration">
+
         <input type="hidden" name="redirect" value="thankyou.html">
-      
+
+        <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
+
         <div style="margin-bottom:20px;">
+
           <label>Full Name</label><br>
-          <input type="text" name="name" required
+
+          <input
+            type="text"
+            name="name"
+            required
             placeholder="Enter your name"
             style="width:100%; padding:12px; border-radius:10px; border:1px solid #ccc;">
+
         </div>
-      
+
         <div style="margin-bottom:20px;">
+
           <label>Email Address</label><br>
-          <input type="email" name="email" required
+
+          <input
+            type="email"
+            name="email"
+            required
             placeholder="Enter your email"
             style="width:100%; padding:12px; border-radius:10px; border:1px solid #ccc;">
+
         </div>
-      
+
         <div style="margin-bottom:20px;">
+
           <label>Contact Number</label><br>
-          <input type="text" name="contact"
+
+          <input
+            type="text"
+            name="contact"
             placeholder="Enter contact number"
             style="width:100%; padding:12px; border-radius:10px; border:1px solid #ccc;">
+
         </div>
-      
+
         <button class="btn" type="submit">
           Submit Registration
         </button>
-      
+
       </form>
+
     </div>
+
   </section>
 
   <footer>
-    <p>© 2026 BSI Alumni 2002 | 20 Years Golden Reunion</p>
+    <p>© 2027 BSI Alumni Batch 2002 | 25 Years Silver Reunion</p>
   </footer>
 
   <script>
-    const reunionDate = new Date("March 28, 2027 08:00:00").getTime();
 
-    const timer = setInterval(function () {
+    const reunionDate = new Date("2027-03-28T08:00:00").getTime();
+
+    const timer = setInterval(function(){
 
       const now = new Date().getTime();
+
       const distance = reunionDate - now;
 
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
       const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
       document.getElementById("days").innerHTML = days;
@@ -528,12 +701,16 @@
       document.getElementById("minutes").innerHTML = minutes;
       document.getElementById("seconds").innerHTML = seconds;
 
-      if (distance < 0) {
+      if(distance < 0){
+
         clearInterval(timer);
-        document.querySelector(".timer").innerHTML = "The Reunion Has Started!";
+
+        document.querySelector(".timer").innerHTML =
+        "The Reunion Has Started!";
       }
 
-    }, 1000);
+    },1000);
+
   </script>
 
 </body>
