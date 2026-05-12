@@ -616,59 +616,43 @@
 
     <div class="details" style="max-width:700px; margin:auto;">
 
-      <form action="https://api.web3forms.com/submit" method="POST">
+<form action="https://api.web3forms.com/submit" method="POST">
 
-        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY">
+  <!-- Your Access Key -->
+  <input type="hidden" name="access_key" value="f9577c6a-44c0-42e8-91b5-e134d0924f84">
 
-        <input type="hidden" name="subject" value="25 Years Silver Reunion Registration">
+  <!-- Email Subject -->
+  <input type="hidden" name="subject" value="25 Years Silver Reunion Registration">
 
-        <input type="hidden" name="redirect" value="thankyou.html">
+  <!-- Redirect After Submit -->
+  <input type="hidden" name="redirect" value="thankyou.html">
 
-        <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
+  <div style="margin-bottom:20px;">
+    <label>Full Name</label><br>
+    <input type="text" name="name" required
+      placeholder="Enter your name"
+      style="width:100%; padding:12px; border-radius:10px; border:1px solid #ccc;">
+  </div>
 
-        <div style="margin-bottom:20px;">
+  <div style="margin-bottom:20px;">
+    <label>Email Address</label><br>
+    <input type="email" name="email" required
+      placeholder="Enter your email"
+      style="width:100%; padding:12px; border-radius:10px; border:1px solid #ccc;">
+  </div>
 
-          <label>Full Name</label><br>
+  <div style="margin-bottom:20px;">
+    <label>Contact Number</label><br>
+    <input type="text" name="contact"
+      placeholder="Enter contact number"
+      style="width:100%; padding:12px; border-radius:10px; border:1px solid #ccc;">
+  </div>
 
-          <input
-            type="text"
-            name="name"
-            required
-            placeholder="Enter your name"
-            style="width:100%; padding:12px; border-radius:10px; border:1px solid #ccc;">
+  <button class="btn" type="submit">
+    Submit Registration
+  </button>
 
-        </div>
-
-        <div style="margin-bottom:20px;">
-
-          <label>Email Address</label><br>
-
-          <input
-            type="email"
-            name="email"
-            required
-            placeholder="Enter your email"
-            style="width:100%; padding:12px; border-radius:10px; border:1px solid #ccc;">
-
-        </div>
-
-        <div style="margin-bottom:20px;">
-
-          <label>Contact Number</label><br>
-
-          <input
-            type="text"
-            name="contact"
-            placeholder="Enter contact number"
-            style="width:100%; padding:12px; border-radius:10px; border:1px solid #ccc;">
-
-        </div>
-
-        <button class="btn" type="submit">
-          Submit Registration
-        </button>
-
-      </form>
+</form>
 
     </div>
 
